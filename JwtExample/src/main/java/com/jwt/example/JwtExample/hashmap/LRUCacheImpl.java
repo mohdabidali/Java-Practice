@@ -82,5 +82,42 @@ public class LRUCacheImpl {
          *
          **/
     }
+/**
+import java.util.Map;
 
+public class PaymentService {
+    public void transferMoney(Map<Integer, Double> accounts, int fromAccountId, int toAccountId, double amount) {
+        synchronized(accounts) {
+            if(accounts.containsKey(fromAccountId) && accounts.containsKey(toAccountId)) {
+                double fromAccountBalance = accounts.get(fromAccountId);
+                double toAccountBalance = accounts.get(toAccountId);
+
+                if(fromAccountBalance >= amount) {
+                    try {
+                        fromAccountBalance -= amount;
+                        toAccountBalance += amount;
+
+                        // Update balances
+                        accounts.put(fromAccountId, fromAccountBalance);
+                        accounts.put(toAccountId, toAccountBalance);
+
+                        System.out.println("Transaction successful. Transferred $" + amount + " from Account " + fromAccountId + " to Account " + toAccountId);
+                    } catch (Exception e) {
+                        // Rollback changes
+                        accounts.put(fromAccountId, fromAccountBalance);
+                        accounts.put(toAccountId, toAccountBalance);
+
+                        System.out.println("Transaction failed. Rolling back changes.");
+                    }
+                } else {
+                    System.out.println("Insufficient funds in Account " + fromAccountId + " to perform transaction.");
+                }
+            } else {
+                System.out.println("Invalid Account IDs provided.");
+            }
+        }
+    }
+}
+
+ */
 }
