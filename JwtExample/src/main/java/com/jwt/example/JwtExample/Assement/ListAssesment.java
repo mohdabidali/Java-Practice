@@ -21,6 +21,7 @@ public class ListAssesment {
 
         System.out.println("EvenList"+ evenNumber);
         System.out.println("OddLsit"+ oddNumber);
+        System.out.println("OddNUMBERS"+ oddNumber);
 
 
     }
