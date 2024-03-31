@@ -22,6 +22,9 @@ public class ListAssesment {
         System.out.println("EvenList"+ evenNumber);
         System.out.println("OddLsit"+ oddNumber);
         System.out.println("OddNUMBERS"+ oddNumber);
+        /**
+         * this is the for creating conflict when merging
+         */
 
 /**
  * Adding comments for the merge
