@@ -23,6 +23,9 @@ public class ListAssesment {
         System.out.println("OddLsit"+ oddNumber);
         System.out.println("OddNUMBERS"+ oddNumber);
 
+/**
+ * Adding comments for the merge
+ */
 
     }
 }
