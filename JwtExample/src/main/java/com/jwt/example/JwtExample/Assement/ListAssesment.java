@@ -21,7 +21,9 @@ public class ListAssesment {
 
         System.out.println("EvenList"+ evenNumber);
         System.out.println("OddLsit"+ oddNumber);
-// git branch switching
+/**
+ * Adding comments for the merge
+ */
 
     }
 }
